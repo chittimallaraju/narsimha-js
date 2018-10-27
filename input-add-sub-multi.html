@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<head>
+<style>
+*{
+margin:0px;
+padding:0px;
+}
+label{
+padding:10px 0px;
+}
+input{
+margin-bottom:10px;
+
+}
+</style>
+</head>
+<body>
+
+<!--addition using form input-->
+<div style="width:200px; padding:20px; border:1px solid #CCC; margin:0px auto;">
+<form>
+First Number:
+<input type="text" id="t1"  />
+<br>
+Second Number:
+<input type="text" id="t2"  />
+<br>
+Result: 
+<input type="text" id="t3" />
+
+<input type="button" onclick="add()" value="add">
+<input type="button" onclick="sub()" value="sub">
+<input type="button" onclick="mul()" value="mul">
+<input type="button" onclick="division()" value="divsion">
+</form>
+</div>
+
+<script>
+function add(){
+var obj1 = document.getElementById("t1");
+var obj2 = document.getElementById("t2");
+var obj3 = document.getElementById("t3");
+//obj3.value = parseInt(obj1.value) + parseFloat(obj2.value);
+var x = parseInt(obj1.value);
+var y = parseInt(obj2.value);
+obj3.value = x + y;
+}
+
+function sub(){
+var obj1 = document.getElementById("t1");
+var obj2 = document.getElementById("t2");
+var obj3 = document.getElementById("t3");
+//obj3.value = parseInt(obj1.value) - parseFloat(obj2.value);
+var x = parseInt(obj1.value);
+var y = parseInt(obj2.value);
+obj3.value = x - y;
+}
+
+function mul(){
+var obj1 = document.getElementById("t1");
+var obj2 = document.getElementById("t2");
+var obj3 = document.getElementById("t3");
+//obj3.value = parseInt(obj1.value) * parseFloat(obj2.value);
+var x = parseInt(obj1.value);
+var y = parseInt(obj2.value);
+obj3.value = x * y;
+}
+
+function division(){
+var obj1 = document.getElementById("t1");
+var obj2 = document.getElementById("t2");
+var obj3 = document.getElementById("t3");
+//obj3.value = parseInt(obj1.value) / parseFloat(obj2.value);
+var x = parseInt(obj1.value);
+var y = parseInt(obj2.value);
+obj3.value = x / y;
+}
+
+</script>
+
+</body>
+
+</html>

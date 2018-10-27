@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<head>
+<style>
+*{
+margin:0px;
+padding:0px;
+}
+body{
+background: #f1f1f1;
+font-family:Arial;
+}
+
+input{
+margin:3px 0 15px 0;
+display:block;
+width:95%;
+padding:10px;
+border-radius:5px;
+border:1px solid #CCC;
+
+}
+input[type="button"]{
+width:40%;
+margin:0px auto;
+background:red;
+padding:10px 15px;
+border:1px solid;
+color: #FFF;
+
+}
+#total{
+margin-top:10px;
+text-align:center;
+
+}
+.form-div{
+width:300px;  
+padding:20px; 
+border:1px solid #CCC; 
+margin:150px auto; 
+background:#66ccff; 
+border-radius:10px;
+
+}
+</style>
+</head>
+<body>
+
+<!--addition using form input-->
+<div class="form-div">
+<form>
+Product Name: <input type="text" id="t1">
+Unit Price: <input type="text" id="rate">
+Quantity: <input type="text" id="qunti">
+<input type="button" onClick="func()" value="Get Total" >
+<p id="total">Total Amount:</p>
+</form>
+</div>
+
+<script>
+function func(){
+
+var obj1 = document.getElementById("t1");
+var obj2 = document.getElementById("rate");
+var obj3 = document.getElementById("qunti");
+var obj4 = document.getElementById("total");
+ var x = parseInt(obj2.value);
+ var y = parseInt(obj3.value);
+ //alert ("x="+x+"y="+y);
+ var text=obj4.innerText;
+ obj4.style.color = "#cc3300";
+ 
+ obj4.innerText=text + (x*y);
+}
+</script>
+
+</body>
+
+</html>
